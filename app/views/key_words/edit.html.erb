@@ -1,3 +1,6 @@
-<h1>Edit keyword</h1>
-<%= render 'key_words/form' %>
-<%= link_to 'All keywords', key_words_path %>
+<% provide(:submit, 'Edit keyword') %>
+<div class="container">
+  <h1>Edit keyword</h1>
+  <%= render 'key_words/form' %>
+  <%= link_to 'All keywords', key_words_path %>
+</div>
