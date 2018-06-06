@@ -1,4 +1,9 @@
 <div class="container">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
+  <h1>My favorite tweets</h1>
+  <% @tweets.each do |tweet| %>
+    <div class="tweet">
+      <p class="text-bold"><%= tweet.username %></p>
+      <p><%= tweet.content %></p>
+    </div>
+  <% end %>
 </div>
