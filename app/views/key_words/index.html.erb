@@ -1,0 +1,9 @@
+<h1>Keywords index</h1>
+<%= link_to 'Add a keyword', new_key_word_path %>
+<ul>
+  <% @key_words.each do |key_word| %>
+    <li>
+      <%= link_to key_word.name, key_word_path(key_word) %>
+    </li>
+  <% end %>
+</ul>

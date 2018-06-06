@@ -1,0 +1,4 @@
+<h1><%= @key_word.name %></h1>
+<%= link_to 'Edit keyword', edit_key_word_path %>
+<%= link_to 'Delete keyword', key_word_path(@key_word), method: :delete %>
+<%= link_to 'All keywords', key_words_path %>
