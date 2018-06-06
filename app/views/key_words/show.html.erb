@@ -3,4 +3,9 @@
   <%= link_to 'Edit keyword', edit_key_word_path %>
   <%= link_to 'Delete keyword', key_word_path(@key_word), method: :delete %>
   <%= link_to 'All keywords', key_words_path %>
+
+  <h1>Tweets</h1>
+  <% @tweets.each do |tweet| %>
+    <p><%= tweet.text %></p>
+  <% end %>
 </div>

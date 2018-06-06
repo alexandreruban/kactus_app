@@ -6,6 +6,7 @@ class KeyWordsController < ApplicationController
   end
 
   def show
+    @tweets = TwitterJob.perform_now(@key_word)
   end
 
   def new
