@@ -1,11 +1,15 @@
 <div class="container">
   <h1><%= @key_word.name %></h1>
-  <%= link_to 'Edit keyword', edit_key_word_path %>
-  <%= link_to 'Delete keyword', key_word_path(@key_word), method: :delete %>
-  <%= link_to 'All keywords', key_words_path %>
+  <p><%= link_to 'Edit keyword', edit_key_word_path %></p>
+  <p><%= link_to 'Delete keyword', key_word_path(@key_word), method: :delete %></p>
+  <p><%= link_to 'All keywords', key_words_path %></p>
 
   <h1>Tweets</h1>
   <% @tweets.each do |tweet| %>
-    <p><%= tweet.text %>(pubished <%= time_ago_in_words tweet.created_at %> ago)</p>
+    <div class="tweet">
+      <p class="text-bold"><%= tweet.user.name %></p>
+      <p><%= tweet.text %></p>
+      <p class="text-muted">(pubished <%= time_ago_in_words tweet.created_at %> ago)</p>
+    </div>
   <% end %>
 </div>
