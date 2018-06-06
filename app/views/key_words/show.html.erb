@@ -10,6 +10,7 @@
       <p class="text-bold"><%= tweet.user.name %></p>
       <p><%= tweet.text %></p>
       <p class="text-muted">(pubished <%= time_ago_in_words tweet.created_at %> ago)</p>
+      <p><%= icon('fas', 'times', class: "icon-destroy") %></p>
     </div>
   <% end %>
 </div>
